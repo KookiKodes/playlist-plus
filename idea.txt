@@ -1,0 +1,23 @@
+Create an instruction based program for Spotify that is more or less a language that allows you to easily
+update playlists with key words, like +(5) Carry On will place the song 5th in the list with Spotify.
+
+Project idea, I don't want order to matter, the compiler/syntax needs to make it where order does not entirely matter. A lot of the idea will be focused to be used within the terminal. I think the program will allow a text file to be read ie playlist-plus -f(-f for file) "filename.txt" meaning that in order to read a file we have to add the -f flag and the file name. Otherwise when the program is run it will simply start a constantly running program within the terminal. Essentially I want this to be like the idea of vim, but for playlists. Of course it will be much more simple, but that's the kind of ease of use I want to create.
+
+1. Order should not matter
+2. Treat the below syntax like functions which can take in parameters
+3. The program should be easy to use/learn.
+4. Should allow to be used with Spotify, Youtube and Soundcloud (of course only if they have apis that allow for it).
+5. Let's have fun :) !
+
+SYNTAX:
+  [playlist] = selected playlist | [My Playlist]
+  "song name" or 'song name' = selected song title | "Cool Song Name"
+  !keyword = keyword | !last, !before, !after, !first
+  +(num | !keyword) = add | [playlist] +"song name";
+  -(num | !keyword) = remove | [playlist] -"song name";
+  ^(num | !keyword) = move up | [playlist] ^"song name";
+  v(num | !keyword) = move down | [playlist] v"song name";
+  >(num | !keyword) = before | [playlist] "song name">"other song name";
+  <(num | !keyword) = after | [playlist] "song name"<"other song name";
+  =>(num | !keyword) = move | [playlist] "song name"=>(!last);
+  <>(!keyword) = together or link | [playlist] "song name"<>"other song name"<>"another song name";
